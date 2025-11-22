@@ -3,64 +3,163 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
-    color: #FFF;
+    color: #fff;
 }
 
 html,
 body {
     height: 100%;
     width: 100%;
-
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-main {
+main{
+    height: 30%;
+    width: 30%;
+    background: #2f2b2b;
+    border-radius: 50px;
+    display: flex;
+    
+    justify-content: center;
+    
+}
+.box{
     height: 100%;
     width: 100%;
-    background-color: #202020;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: 10% 5%;
+    
 }
-
-section{
-    height: 40%;
-    width: 20%;
-    background-color: #20aaff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    gap: 10%;
+.head{
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 50px;
     
 }
 
-.btn-crystal {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-    color: white;
-    border-radius: 10%;
-    padding: 5% 10%;
+.head .inner{
+    height: 100%;
+    width: 0%;
+    background: #1eff45;
+    border-radius: 50px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 5%;
+    align-items: center;
+    
+}
+.bottom h2{
+    font-size: 7rem;
+
+    font-weight:100;
+}
+/* --- BUTTON BASE --- */
+.btn {
+  position: relative;
+  width: 155px;
+  height: 50px;
+  cursor: pointer;
 }
 
-.btn-crystal::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 200%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    transform: rotate(45deg);
-    top: -50%;
-    left: -100%;
-    transition: left 0.6s ease;
+/* --- INSIDE LINK --- */
+.btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.8s;
+  backdrop-filter: blur(15px);
+  z-index: 1;
 }
 
-.btn-crystal:hover::before {
-    left: 150%;
+.btn:hover a {
+  letter-spacing: 3px;
+}
+
+/* --- LIGHT SWIPE EFFECT --- */
+.btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255,255,255,0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.8s;
+}
+
+.btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+/* --- GLOW BORDERS (BOTTOM) --- */
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #1eff45;
+  border-radius: 10px;
+  transition: 0.8s;
+  box-shadow: 0 0 5px #1eff45,
+              0 0 15px #1eff45,
+              0 0 30px #1eff45,
+              0 0 60px #1eff45;
+}
+
+.btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+/* --- GLOW BORDERS (TOP) --- */
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #1eff45;
+  border-radius: 10px;
+  transition: 0.8s;
+  box-shadow: 0 0 5px #1eff45,
+              0 0 15px #1eff45,
+              0 0 30px #1eff45,
+              0 0 60px #1eff45;
+}
+
+.btn:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
 }
 
 
