@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #FFF;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section{
+    height: 40%;
+    width: 20%;
+    background-color: #20aaff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    gap: 10%;
+    
+}
+
+.btn-crystal {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    color: white;
+    border-radius: 10%;
+    padding: 5% 10%;
+}
+
+.btn-crystal::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: rotate(45deg);
+    top: -50%;
+    left: -100%;
+    transition: left 0.6s ease;
+}
+
+.btn-crystal:hover::before {
+    left: 150%;
+}
+
+
+
+
