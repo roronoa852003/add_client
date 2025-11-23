@@ -19,35 +19,17 @@ body {
 }
 
 main{
-    height: 50%;
-    width: 20%;
-    background: #2d2d2d;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: none;
+
 }
 
 main img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+  height: 70px;
+  width: 70px;
+  position: fixed ;
+  transform: translate(-35%,-20%);
 
-main i {
-  position: absolute;
-  font-size: 70px;
-  
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  background-clip: text;
-  color: transparent;
-  transform:translate(0%,0%) scale(0) rotate(-60deg);
-  transition: all cubic-bezier(.59,.44,.6,1.93) 0.4s;
 }
 
