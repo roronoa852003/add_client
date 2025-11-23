@@ -19,92 +19,35 @@ body {
 }
 
 main{
-    height: 30%;
-    width: 30%;
+    height: 50%;
+    width: 20%;
     background: #2d2d2d;
-    border-radius: 50px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-}
-.box{
-    height: 100%;
-    width: 100%;
-    padding: 10% 5%;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    position: relative;
     align-items: center;
 }
 
-.container{
-  height: 80%;
-  width: 95%;
-  background: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  padding: 4%;
-  cursor: default;
-  position: relative;
+main img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.container img{
-  height: 95%;
-  width: 20%;
-  border-radius: 50%;
+main i {
+  position: absolute;
+  font-size: 70px;
+  
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  color: transparent;
+  transform:translate(0%,0%) scale(0) rotate(-60deg);
+  transition: all cubic-bezier(.59,.44,.6,1.93) 0.4s;
 }
 
-button{
-  width: 30%;
-  background-color: rgb(0, 132, 255);
-  padding: 3% 4%;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  font-size: larger;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-}
-.follow{
-  padding:  0% 5%;
-}
-
-.follow h2 span{
-  font-weight: 900;
-  color: #000000;
-}
-
-.follow h2{
-  color: black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-}
-
-.bottom{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 10%;
-    width: 30%;
-    padding: 5% 5%;
-}
-
-.bottom .left{
-  text-align: center;
-  font-weight: 200;
-}
-.bottom .left h2{
-  font-weight: 300;
-  font-size: 20px;
-}
-.bottom .right{
-  text-align: center;
-}
-.bottom .right h2{
-  font-weight: 300;
-  font-size: 20px;
-}

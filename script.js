@@ -1,23 +1,18 @@
-let btn=document.querySelector('button');
-let following=document.querySelector('.right span');
-let followers=document.querySelector('.left span');
-let flag=0;
+let heart=document.querySelector('main i');
+let card=document.querySelector('main');
 
-btn.addEventListener('click',()=>{
-    if(flag===0){
-        btn.innerHTML='following';
-        btn.style.backgroundColor='white';
-        btn.style.color='black';
-        btn.style.border = '1px solid black';
-        following.innerHTML='1'
-        flag=1;
-    }
-    else{
-        btn.innerHTML='Follow back';
-        btn.style.backgroundColor='rgb(0, 132, 255)';
-        btn.style.color='white';
-        btn.style.border = 'none';
-        following.innerHTML='0'
-        flag=0;
-    }
+
+card.addEventListener('dblclick',()=>{
+    heart.style.opacity='1';
+    heart.style.transform='translate(0%,0%) scale(1) rotate(0deg)'
+
+    setTimeout(()=>{
+        heart.style.transform='translate(0%,-300%) scale(1) rotate(0deg)';
+    },800);
+    setTimeout(()=>{
+        heart.style.opacity='0';
+    },1000);
+    setTimeout(()=>{
+        heart.style.transform='translate(0%,0%) scale(0) rotate(-60deg)';
+    },1200)
 })
